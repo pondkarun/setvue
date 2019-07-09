@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>test</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+
+  <script src="js/vue.js"></script>
+
+</head>
+
+<body>
+  <div id="vue-app">
+    <section>
+      <nav class="nav">TEST</nav>
+    </section>
+
+    <section class="nav-side">
+
+      <!-- vue 4 -->
+      <div id="side">
+
+        <blog-post v-for="post in posts" v-bind:test="post"></blog-post>
+
+      </div>
+
+    </section>
+
+    <section class="main">
+      <div class="main-body">
+        <div>
+          <h1 class="text-center">Form 1</h1>
+          <hr>
+
+          <!-- <form>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputname">ชื่อ</label>
+                <input type="text" class="form-control " id="inputname" name="inputname" placeholder="ชื่อ"
+                  v-model="model.name" :readonly="isview" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputname2">นามสกุล</label>
+                <input type="text" class="form-control" id="inputname2" name="inputname2" placeholder="นามสกุล"
+                  v-model="model.name2" :readonly="isview">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress">ที่อยู่</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="ที่อยู่" v-model="model.address"
+                :readonly="isview">
+            </div>
+            <center class="p-5">
+              <button type="button" v-on:click="onSubmit()" class="btn btn-success"> ตกลง</button>
+              <span> || </span>
+              <button type="button" v-on:click="resetform()" class="btn btn-danger">reset</button>
+              <span> || </span>
+              <button type="button" class="btn btn-danger">ยกเลิก</button>
+            </center>
+          </form> -->
+
+          <form1 v-bind:model="model" v-bind:isview="isview"></form1>
+
+
+
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src=" js/ts-vue.js"> </script>
+</body>
+
+</html>
